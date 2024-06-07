@@ -3,9 +3,11 @@ Welcome to the classic game of Mastermind! This project is a web-based implement
 
 
 
+
 How to Play
 
 Mastermind is a game of logic and deduction. The objective is to guess the secret code, which is a sequence of colored pegs chosen by the computer. The code consists of a series of pegs, each with a color. There are usually four pegs in the code, but this can vary depending on the game settings.
+
 
 
 
@@ -20,6 +22,7 @@ Rules
 
 
 
+
 How to Play
 
 -Open index.html in your web browser.
@@ -28,12 +31,15 @@ How to Play
 -Continue guessing until you either crack the code or exhaust your attempts.
 
 
+
 Features
 
 -Interactive interface: Click on the colored pegs to make your guesses and receive immediate feedback.
 
 
+
 Technologies Used
+
 HTML: Structure of the web page.
 CSS: Styling and layout of the game interface.
 JavaScript: Logic and functionality of the game.
