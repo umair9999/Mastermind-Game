@@ -11,6 +11,7 @@ Rules
 The codebreaker (you) tries to guess the secret code by placing colored pegs in a row.
 After each guess, the codemaker (computer) provides feedback in the form of black and white pegs:
 
+
 A black peg indicates a correct color in the correct position.
 
 A white peg indicates a correct color but in the wrong position.
@@ -18,6 +19,7 @@ A white peg indicates a correct color but in the wrong position.
 No peg indicates that the color is not present in the secret code.
 
 Using this feedback, the codebreaker refines their guesses until they crack the code or run out of attempts.
+
 
 
 How to Play
@@ -31,9 +33,11 @@ After each guess, review the feedback provided by the computer.
 Continue guessing until you either crack the code or exhaust your attempts.
 
 
+
 Features
 
 Interactive interface: Click on the colored pegs to make your guesses and receive immediate feedback.
+
 
 Technologies Used
 
