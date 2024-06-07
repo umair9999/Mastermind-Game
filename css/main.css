@@ -1,0 +1,342 @@
+ html,
+ button,
+ input,
+ select,
+ textarea {
+  color: #222;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+
+::-moz-selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+
+::selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+
+
+hr {
+display: block;
+height: 1px;
+border: 0;
+border-top: 1px solid #ccc;
+margin: 1em 0;
+padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+vertical-align: middle;
+}
+
+
+fieldset {
+border: 0;
+margin: 0;
+padding: 0;
+}
+
+
+
+textarea {
+resize: vertical;
+}
+
+
+ .browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+
+* {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body{
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background-color: #00171F;
+  transition: background-color .5s ease;
+}
+
+body.won { background-color: #8FBE00; }
+body.lost { background-color: #E22D2D; }
+
+h1 {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.7em;
+}
+
+.wrapper {
+  display: block;
+  width: 810px;
+  margin: 0 auto;
+}
+
+header {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+hr {
+  border-top: 2px dotted #fff;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.textual {
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.option,
+.socket {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #00A7E1;
+}
+
+#guesses {
+  display: inline-block;
+  background-color: #003459;
+  border-radius: 3px 0 0 3px;
+  padding: 15px 30px;
+  font-size: 0;
+}
+
+.guess { margin-top: 15px; }
+
+.option,
+.code .socket,
+.guess .socket {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.code .socket + .socket,
+.guess .socket + .socket { margin-left: 10px; }
+
+.code {
+  border-bottom: 2px solid #c7bf8d;
+  padding-bottom: 15px;
+}
+
+.secret {
+  color: #e3dcb5;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.socket.peg {
+  -webkit-animation: bounceIn .4s;
+  -o-animation: bounceIn .4s;
+  animation: bounceIn .4s;
+}
+
+
+
+/******************* HINTS *******************/
+
+#hints {
+  vertical-align: bottom;
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #D2FDFF;
+  border-radius: 0 3px 3px 0;
+  font-size: 0;
+}
+
+.hint {
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hint .row { height: 10px; }
+.hint .row + .row { margin-top: 5px; }
+
+.hint .socket {
+  width: 10px;
+  height: 10px;
+}
+
+.hint .socket + .socket { margin-left: 5px; }
+
+.hint + .hint { margin-top: 15px; }
+.hit { background-color: #000; }
+.almost { background-color: #fff; }
+
+#modalMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 630px;
+  /*min-width: 320px;*/
+  height: auto;
+  z-index: 2000;
+  opacity: 1;
+  border-radius: 2px;
+  padding: 15px 20px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#modalOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+#modalOverlay.hidden {
+  visibility: hidden;
+}
+
+#modalOverlay.won {
+  background-color: rgba(143, 190, 0, .5);
+  visibility: visible;
+  opacity: 1;
+}
+
+#modalOverlay.won #modalMessage {
+  background-color: #8FBE00;
+  border: 5px solid #fff;
+}
+
+#modalOverlay.lost {
+  background-color: rgba(226, 45, 45, .5);
+  visibility: visible;
+  opacity: 1;
+}
+
+#modalOverlay.lost #modalMessage {
+  background-color: #E22D2D;
+  border: 5px solid #fff;
+}
+
+#options {
+  margin: 0 auto;
+  padding: 20px 0;
+  display: block;
+  text-align: center;
+  font-size: 0;
+}
+
+#options button + button {
+  margin-left: 10px;
+}
+
+
+.option {
+  margin-right: .5em;
+  -moz-transition: all .1s ease;
+}
+
+
+button {
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 800;
+  padding: 5px 10px;
+  color: #333;
+  background-color: #8FBE00;
+  vertical-align: middle;
+}
+
+button.large {
+  padding: 15px 20px;
+}
+
+button.primary {
+  color: #333;
+}
+
+#delete {
+  font-size: 21px;
+  background-color: #8FBE00;
+}
+
+#instructions {
+  display: none;
+  width: 400px;
+  vertical-align: top;
+}
+
+/************* Colors *************/
+
+.green { background: #8FBE00; }
+.red { background: #E22D2D; }
+.blue { background: #0B4F6C; }
+.yellow { background: #F8CA00; }
+.black { background: #191919; }
+.purple { background: #993394; }
+.brown { background: #6b4d39; }
+.white { background: #fff; }
+
+
+footer {
+  text-align: center;
+}
+
+footer small {
+  font-size: .7em;
+}
+
+footer a {
+  color: inherit;
+}
+
+
+
+/* ==========================================================================
+ EXAMPLE Media Queries for Responsive Design.
+ These examples override the primary ('mobile first') styles.
+ Modify as content requires.
+ ========================================================================== */
